@@ -118,7 +118,7 @@ function TreeServ(tro, pfx, ico) {
     el = document.createElement('img');
     var img = li.insertBefore(el, span);
     img.setAttribute('alt', '+');
-    img.setAttribute('src', ico['+']);
+    img.setAttribute('src', ico['+'].src);
     return img;
   };
 

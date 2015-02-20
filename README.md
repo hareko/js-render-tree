@@ -50,4 +50,4 @@ The following files are included:
 3. *base.js* - common functionality;
 4. *index.html* - demo page;
 5. *style.css* - layout and tree styles;
-6. *readme.md. - the file you are reading.
+6. *readme.md* - the file you are reading.

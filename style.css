@@ -1,0 +1,60 @@
+/*
+ * Render a tree of objects
+ *
+ * @package     Task
+ * @author      Vallo Reima
+ * @copyright   (C)2015
+*/
+html, body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  overflow: auto;
+}
+.tree {
+   margin-left: 1em;
+}
+.command {
+ margin-bottom: 1em;
+}
+.command button {
+}
+.enabled:hover {
+  cursor: pointer;
+}
+.tree ul {
+  list-style: none;
+  margin-top: 0.5em;
+  padding: 0;
+}
+.tree li {
+  padding-top: 0.25em;
+}
+.tree img:hover {
+  cursor: pointer;
+}
+.tree ul li {
+  font-size: 0.93em;
+}
+.tree ul ul {
+  display: none;
+}
+.tree ul ul li {
+  margin-left: 1.0em;
+}
+.tree img {
+  margin-right: 0.3em;
+}
+.tree span {
+  color: black;
+  text-decoration: none;
+}
+.tree span:hover{
+  background-color: #dddddd;
+  cursor: default;
+}
+.selected{
+  background-color: #cccccc;
+}
+.hide{
+  display:none;
+}

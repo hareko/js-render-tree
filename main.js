@@ -248,7 +248,7 @@ function Tree(parm) {
     var ul = $$(obj.parentNode, 'ul')[0];
     ul.style.display = alt === '-' ? 'inline' : 'none';
     obj.setAttribute('alt', alt);
-    obj.setAttribute('src', ico[alt]);
+    obj.setAttribute('src', ico[alt].src);
   };
 
   /**
@@ -295,5 +295,11 @@ function Tree(parm) {
     mode = mde;
   };
 
+  var p = 'http://arc.vallo.me/pub/';
+  for (var i in ico) {  /* preload images */
+    var cc = ico[i];
+    ico[i] = new Image();
+    ico[i].src = p + cc;
+  }
   Init();
 }

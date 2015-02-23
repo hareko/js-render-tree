@@ -1,21 +1,25 @@
 Render a tree of objects
 ========================
 
-The Tree and TreeServ JavaScript classes allow to create and modify the tree structure front-end. 
+The Tree and TreeServ JavaScript classes allow to create and change the tree structure front-end. 
 
 The usage
 ---------
 
 Call the script after the page load (see *index.html*):
 
-**Tree([opts]);**
+**var tree = new Tree([opts]);**
+**tree.Init([opts][,data]);**
 
 opts - the options object:
 
-- cfm - confirm node deletion (*bool* type, default is no confirming);
-- rcn - create the tree recursively (*bool* type, default is iteratively).
+- tro - tree object (*object*, default is id='tree')
+- cmo - command set (*object*, default is id='command')
+- cfm - confirm node deletion (*bool*, default is no confirming);
+- rcn - create the tree recursively (*bool*, default is iteratively);
+- pth - images url path.
 
-The *'command'* and *'tree'* sections with according id's must exist before calling. The default tree is created and first node is selected. 
+The *'command'* and *'tree'* html sections with according id's must exist before calling. The default tree is created and first node is selected. 
 
 Command set
 -----------
@@ -37,8 +41,12 @@ The command buttons are available or disabled depending on the node selection.
 Modifying
 ---------
 
-Add and Edit commands switch you into the Change status. Type in the node name and press Enter to save. Or press Esc to cancel. Save command requires HTML5 localStorage support. The tree state is saved under localStorage.treeState. Restore loads the default tree if nothing is saved.
+Add and Edit commands switch you into the Change status. Type in the node name and press Enter to save. Or press Esc to cancel. Delete asks for confirmation if *cfm* option is *true*. Save command requires HTML5 localStorage support. The tree state is saved under *localStorage.treeState*. Restore loads the default tree if nothing is saved.
 
+Testing
+-------
+
+The *index.html* demo shell displays default tree with the command set. You can select another tree structure in the *test.js*. Assign the tree definition array to the *treeData* variable and include the script tag into *index.html* head.
 
 The package
 -----------
@@ -46,8 +54,9 @@ The package
 The following files are included:
 
 1. *main.js* - Tree class; controls the tree activity;
-2. *serv.js* - TreeServ class; supplies the tree contents;
+2. *serv.js* - TreeServ class; serves the tree changes;
 3. *base.js* - common functionality;
-4. *index.html* - demo page;
+4. *index.html* - demo shell;
 5. *style.css* - layout and tree styles;
-6. *readme.md* - the file you are reading.
+6. *test.js* - tree structure test data
+7. *readme.md* - the file you are reading.

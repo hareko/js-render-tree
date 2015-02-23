@@ -8,8 +8,8 @@ The usage
 
 Call the script after the page load (see *index.html*):
 
-**var tree = new Tree([opts]);**
-**tree.Init([opts][,data]);**
+>**var tree = new Tree([opts]);  
+>tree.Init([opts][,data]);**
 
 opts - the options object:
 
@@ -19,7 +19,7 @@ opts - the options object:
 - rcn - create the tree recursively (*bool*, default is iteratively);
 - pth - images url path.
 
-The *'command'* and *'tree'* html sections with according id's must exist before calling. The default tree is created and first node is selected. 
+The default tree is created and first node is selected. 
 
 Command set
 -----------

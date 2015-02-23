@@ -7,31 +7,34 @@
 -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tree of Objects</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="base.js" type="text/javascript"></script>
-    <script src="serv.js" type="text/javascript"></script>
-    <script src="main.js" type="text/javascript"></script>
-    <style type="text/css">
-    </style>
-    <script type="text/javascript">
-      window.onload = function() {
-        var opt = {cfm: true, rcn: true};
-        Tree(opt);
-      };
-    </script>
-  </head>
-  <body> 
-    <h4>Tree of Objects</h4>
-    <div class="command" id="command">
-      <button type="button" name="A" title="Create node">Add</button>
-      <button type="button" name="M" title="Rename node">Edit</button>
-      <button type="button" name="D" title="Remove node">Delete</button>
-      <button type="button" name="S" title="Save tree">Save</button>
-      <button type="button" name="R" title="Restore saved tree">Restore</button>
-    </div>    
-    <div class="tree" id="tree"></div>  
-  </body>
+    <head>
+        <title>Tree of Objects</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="base.js" type="text/javascript"></script>
+        <script src="serv.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
+        <script src="test.js" type="text/javascript"></script>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            window.onload = function () {
+                var opt = {pth: 'http://arc.vallo.me/pub/', cfm: false};
+                var tree = new Tree(opt);
+                var dat = typeof treeData === 'undefined' ? null : treeData;
+                tree.Init({rcn: true}, dat);
+            };
+        </script>
+    </head>
+    <body> 
+        <h4>Tree of Objects</h4>
+        <div class="command" id="command">
+            <button type="button" name="A" title="Create node">Add</button>
+            <button type="button" name="M" title="Rename node">Edit</button>
+            <button type="button" name="D" title="Remove node">Delete</button>
+            <button type="button" name="S" title="Save tree">Save</button>
+            <button type="button" name="R" title="Restore saved tree">Restore</button>
+        </div>    
+        <div class="tree" id="tree"></div>  
+    </body>
 </html>

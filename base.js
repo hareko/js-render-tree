@@ -104,3 +104,7 @@ function IsBlank(string)
   var blankRE = /^[\s]*$/;
   return blankRE.test(string);
 }
+
+function IsArray(varMixed) {
+  return (typeof varMixed === 'object') && (varMixed instanceof Array);
+}

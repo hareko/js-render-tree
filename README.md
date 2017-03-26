@@ -17,7 +17,7 @@ opts - the options object:
 - cmo - command set (*object*, default is id='command')
 - cfm - confirm node deletion (*bool*, default is no confirming);
 - rcn - create the tree recursively (*bool*, default is iteratively);
-- pth - images url path.
+- pth - images path.
 
 The default tree is created and first node is selected. 
 
@@ -56,7 +56,8 @@ The following files are included:
 1. *main.js* - Tree class; controls the tree activity;
 2. *serv.js* - TreeServ class; serves the tree changes;
 3. *base.js* - common functionality;
-4. *index.html* - demo shell;
-5. *style.css* - layout and tree styles;
-6. *test.js* - tree structure test data
-7. *readme.md* - the file you are reading.
+4. *img/* - images folder;
+5. *index.html* - demo shell;
+6. *style.css* - layout and tree styles;
+7. *test.js* - tree structure test data
+8. *readme.md* - the file you are reading.
